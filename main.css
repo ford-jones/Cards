@@ -1,0 +1,53 @@
+/*---------DOCUMENT---------*/
+
+body {
+  background-color: green;
+}
+
+/*--------CONTAINERS---------*/
+#banner {
+  width: 100%;
+  background-color: antiquewhite;
+  text-align: center;
+  margin-top: 0px;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  box-shadow: 2px 2px 2px;
+}
+
+#dealt-container {
+  margin: auto;
+  position: relative;
+  top: 700px;
+}
+
+/*---------BOXES-----------*/
+#dealtCards {
+  margin-right: auto;
+  margin-left: auto;
+  border-spacing: 10px;
+}
+.hand {
+  margin: 10px 10px 10px 10px;
+  border: solid whitesmoke;
+  border-width: 5px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  height: 40px;
+  width: 20px;
+}
+
+/*------------TEXT------------*/
+#banner-text {
+  color: navy;
+  letter-spacing: 14px;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*-----------IMAGES------------*/
+.backgroundImage {
+  
+}
