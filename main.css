@@ -19,7 +19,7 @@ body {
 #dealt-container {
   margin: auto;
   position: relative;
-  top: 700px;
+  top: 200px;
 }
 
 /*---------BOXES-----------*/
@@ -39,6 +39,23 @@ body {
   width: 20px;
 }
 
+/*----------BUTTONS----------*/
+.dealButton {
+  background-color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border: 3px solid navy;
+  border-radius: 10px;
+  padding: 3px;
+  font-weight: bold;
+  margin-left: 65%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-spacing: 30px;
+  top: 300px;
+}
+
 /*------------TEXT------------*/
 #banner-text {
   color: navy;
@@ -49,5 +66,17 @@ body {
 
 /*-----------IMAGES------------*/
 .backgroundImage {
-  
+  margin-left: auto;
+  margin-right: auto;
+  top: 200px;
+  position: relative;
+  display: flex;
+}
+.dealImage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 65%;
+  width: 150px;
+  top: 300px;
 }
