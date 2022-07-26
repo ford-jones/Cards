@@ -9,19 +9,50 @@
 
 /*--------------VARIABLES-----------*/
 
-let cardIndex = 0
+let cardIndex = [
+  `1`,
+  `2`,
+  `3`,
+  `4`,
+  `5`,
+  `6`,
+  `7`,
+  `8`,
+  `9`,
+  `10`,
+  `11`,
+  `12`,
+  `13`,
+]
 
-let suits = {
-  1: `clubs`,
-  2: `diamonds`,
-  3: `hearts`,
-  4: `spades`,
-}
+let suitIndex = [`spades`, `diamonds`, `clubs`, `hearts`]
 
-let cards = document.createElement(`img`)
-cards.src = `images/deck/` + suits + cardIndex + `.png`
+// let deck = document.createElement(`img`)
+// deck.src = `images/deck/` + randomSuit + cardIndex + `.png`
 
 let hand = document.getElementsByClassName(`hand`)
 console.log(hand)
 
 /*-----------FUNCTIONS-----------*/
+function deal() {
+  let randomSuit = suitIndex[Math.floor(Math.random() * suitIndex.length)]
+  // console.log(randomSuit)
+
+  let randomCard = cardIndex[Math.floor(Math.random() * cardIndex.length)]
+  // console.log(randomCard)
+
+  let shuffle = randomSuit.concat(randomCard)
+  console.log(shuffle)
+  // return shuffle
+
+  let deck = document.createElement(`img`)
+  deck.src = `images/deck/` + shuffle + `.png`
+  console.log(deck)
+}
+deal()
+
+// function dealButton() {
+//   let button = document.getElementsByTagName(`button`)
+//   button.onclick(console.log(`clicked!`))
+// }
+// dealButton()
