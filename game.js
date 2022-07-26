@@ -9,10 +9,19 @@
 
 /*--------------VARIABLES-----------*/
 
-let clubsIndex = 0
+let cardIndex = 0
 
-let diamondsIndex = 0
+let suits = {
+  1: `clubs`,
+  2: `diamonds`,
+  3: `hearts`,
+  4: `spades`,
+}
 
-let spadesIndex = 0
+let cards = document.createElement(`img`)
+cards.src = `images/deck/` + suits + cardIndex + `.png`
 
-let heartsIndex = 0
+let hand = document.getElementsByClassName(`hand`)
+console.log(hand)
+
+/*-----------FUNCTIONS-----------*/
