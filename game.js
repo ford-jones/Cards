@@ -47,10 +47,13 @@ function dealNow() {
   let combo = deck + deck.src + shuffle + `.png`
   console.log(combo)
 
-  if (document.getElementById(`hand`).innerHTML !== combo) {
-    document.getElementById(`hand`).innerHTML = combo
+  let cells = document.getElementById(`hand`)
+  // cells = dealNow
+
+  if (cells.innerHTML !== combo) {
+    cells = cells.appendChild(combo)
   }
-  console.log(deck + (deck.src = `images/deck/` + shuffle + `.png`))
+  // console.log(deck + (deck.src = `images/deck/` + shuffle + `.png`))
 }
 
 let button = document.getElementById('dealButton')
