@@ -27,13 +27,20 @@ let cardIndex = [
 
 let suitIndex = [`spades`, `diamonds`, `clubs`, `hearts`]
 
-// let deck = document.createElement(`img`)
-// deck.src = `images/deck/` + randomSuit + cardIndex + `.png`
-
 let hand = document.getElementsByClassName(`hand`)
 console.log(hand)
 
+let button = document.getElementsByClassName(`button`)
+// for (let i = 0; i < button.length; i++) {
+//   button[i].onclick() = deal
+// }
+
 /*-----------FUNCTIONS-----------*/
+// function click() {
+//   let button = document.getElementsByClassName(`button`)
+//   button.onclick() = deal()
+// }
+
 function deal() {
   let randomSuit = suitIndex[Math.floor(Math.random() * suitIndex.length)]
   // console.log(randomSuit)
@@ -46,13 +53,16 @@ function deal() {
   // return shuffle
 
   let deck = document.createElement(`img`)
-  deck.src = `images/deck/` + shuffle + `.png`
+  // deck.src = `images/deck/` + shuffle + `.png`
   console.log(deck)
+  return deck + (deck.src = `images/deck/` + shuffle + `.png`)
 }
-deal()
+button.onclick = deal()
+console.log(button)
+// console.log(deck)
+// deal()
 
-// function dealButton() {
-//   let button = document.getElementsByTagName(`button`)
-//   button.onclick(console.log(`clicked!`))
+// function click() {
+//   let button = document.getElementsByClassName(`button`)
+//   button.onclick() = deal()
 // }
-// dealButton()
