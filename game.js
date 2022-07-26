@@ -27,21 +27,9 @@ let cardIndex = [
 
 let suitIndex = [`spades`, `diamonds`, `clubs`, `hearts`]
 
-let hand = document.getElementsByClassName(`hand`)
-console.log(hand)
-
-let button = document.getElementsByClassName(`button`)
-// for (let i = 0; i < button.length; i++) {
-//   button[i].onclick() = deal
-// }
-
 /*-----------FUNCTIONS-----------*/
-// function click() {
-//   let button = document.getElementsByClassName(`button`)
-//   button.onclick() = deal()
-// }
-
-function deal() {
+function dealNow() {
+  // console.log(`clicked!`)
   let randomSuit = suitIndex[Math.floor(Math.random() * suitIndex.length)]
   // console.log(randomSuit)
 
@@ -49,20 +37,21 @@ function deal() {
   // console.log(randomCard)
 
   let shuffle = randomSuit.concat(randomCard)
-  console.log(shuffle)
-  // return shuffle
+  // console.log(shuffle)
+
+  // let hand = document.getElementsByTagName(`td`)
 
   let deck = document.createElement(`img`)
-  // deck.src = `images/deck/` + shuffle + `.png`
-  console.log(deck)
-  return deck + (deck.src = `images/deck/` + shuffle + `.png`)
-}
-button.onclick = deal()
-console.log(button)
-// console.log(deck)
-// deal()
+  deck.src = `./images/deck/`
 
-// function click() {
-//   let button = document.getElementsByClassName(`button`)
-//   button.onclick() = deal()
-// }
+  let combo = deck + deck.src + shuffle + `.png`
+  console.log(combo)
+
+  if (document.getElementById(`hand`).innerHTML !== combo) {
+    document.getElementById(`hand`).innerHTML = combo
+  }
+  console.log(deck + (deck.src = `images/deck/` + shuffle + `.png`))
+}
+
+let button = document.getElementById('dealButton')
+button.onclick = dealNow

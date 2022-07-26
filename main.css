@@ -28,7 +28,7 @@ body {
   margin-left: auto;
   border-spacing: 10px;
 }
-.hand {
+#hand {
   margin: 10px 10px 10px 10px;
   border: solid whitesmoke;
   border-width: 5px;
@@ -40,7 +40,7 @@ body {
 }
 
 /*----------BUTTONS----------*/
-.dealButton {
+/* #dealButton {
   background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -54,7 +54,8 @@ body {
   flex-direction: column;
   border-spacing: 30px;
   top: 300px;
-}
+  /* cursor: default; */
+/* } */ */
 
 /*------------TEXT------------*/
 #banner-text {
