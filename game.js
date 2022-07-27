@@ -29,7 +29,6 @@ let suitIndex = [`spades`, `diamonds`, `clubs`, `hearts`]
 
 /*-----------FUNCTIONS-----------*/
 function dealNow() {
-  // console.log(`clicked!`)
   let randomSuit = suitIndex[Math.floor(Math.random() * suitIndex.length)]
   // console.log(randomSuit)
 
@@ -37,23 +36,16 @@ function dealNow() {
   // console.log(randomCard)
 
   let shuffle = randomSuit.concat(randomCard)
-  // console.log(shuffle)
-
-  // let hand = document.getElementsByTagName(`td`)
 
   let deck = document.createElement(`img`)
-  deck.src = `./images/deck/`
-
-  let combo = deck + deck.src + shuffle + `.png`
-  console.log(combo)
+  deck.src = `./images/deck/` + shuffle + `.png`
+  console.log(deck)
 
   let cells = document.getElementById(`hand`)
-  // cells = dealNow
 
-  if (cells.innerHTML !== combo) {
-    cells = cells.appendChild(combo)
+  if (cells.innerHTML == ``) {
+    cells = cells.appendChild(deck)
   }
-  // console.log(deck + (deck.src = `images/deck/` + shuffle + `.png`))
 }
 
 let button = document.getElementById('dealButton')

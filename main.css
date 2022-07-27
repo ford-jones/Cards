@@ -19,7 +19,7 @@ body {
 #dealt-container {
   margin: auto;
   position: relative;
-  top: 200px;
+  top: -150px;
 }
 
 /*---------BOXES-----------*/
@@ -40,7 +40,7 @@ body {
 }
 
 /*----------BUTTONS----------*/
-/* #dealButton {
+#dealButton {
   background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -49,13 +49,13 @@ body {
   padding: 3px;
   font-weight: bold;
   margin-left: 65%;
+  margin-top: 300px;
   position: relative;
   display: flex;
   flex-direction: column;
   border-spacing: 30px;
-  top: 300px;
   /* cursor: default; */
-/* } */ */
+}
 
 /*------------TEXT------------*/
 #banner-text {
