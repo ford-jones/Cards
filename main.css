@@ -28,7 +28,7 @@ body {
   margin-left: auto;
   border-spacing: 10px;
 }
-#hand {
+.hand {
   margin: 10px 10px 10px 10px;
   border: solid whitesmoke;
   border-width: 5px;

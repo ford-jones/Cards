@@ -41,12 +41,33 @@ function dealNow() {
   deck.src = `./images/deck/` + shuffle + `.png`
   console.log(deck)
 
-  let cells = document.getElementById(`hand`)
-
-  if (cells.innerHTML == ``) {
-    cells = cells.appendChild(deck)
+  let cells = document.getElementsByTagName(`td`)
+  for (let i = 0; i < cells.length; i++) {
+    if (cells !== deck) {
+      cells[i] = cells[i].appendChild(deck)
+    }
   }
 }
 
+/*---------CALL FUNCTIONS--------*/
 let button = document.getElementById('dealButton')
 button.onclick = dealNow
+
+/*------------APPEND CHILD VARIANT 1-----------*/
+// let cells = document.getElementById(`hand`)
+
+//   if (cells.innerHTML == ``) {
+//     cells = cells.appendChild(deck)
+//   }
+// (this works but only fetches the first id/cell. This was the original solution)
+// (remember to switch all of the td's back to an "id" aswell as the css.)
+
+/*-------APPEND CHILD VARIANT 2-------------*/
+// let cells = document.getElementsByTagName(`td`)
+// for (let i = 0; i < cells.length; i++) {
+//   if (cells !== deck) {
+//     cells[i] = cells[i].appendChild(deck)
+//   }
+// }
+//  (This functions similarly to the first variant but if you remove the CSS styling of classname "hand" you can get multiple cards in the field)
+//  (should be noted that getElementsByTagName hasn't worked in this context without a loop)
