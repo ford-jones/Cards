@@ -1,5 +1,13 @@
-// make a button that when clicked returns 5 random cards and puts them in the field
+/*-----WELCOME TO E-SHUFFLE: DELUXE EDITION------*/
+//THIS PROGRAMME HAS SOME BUGS AND NEEDS SOME WORK
+// 1. MULTIPLE IMAGES ONLY APPEAR IF PADDING IS REMOVED FROM CSS ELEMENT .hand
+// 2. CARDS ARE NOT REMOVED FROM THE DECK, THEY CAN BE DRAWN MULTIPLE TIMES
+// 3. BIG CONSOLE LOG ERROR ON LINE 63, BUT THE PROGRAMME DOESN'T WORK WITHOUT IT
 
+//PUSH ANY IDEAS OR COMMENTS TO FORD-JONES.GITHUB.IO
+
+/*---------PSUEDOCODE----------*/
+// make a button that when clicked returns 5 random cards and puts them in the field
 //make the button clickable .onclick
 //make a randomization function
 //fetch source of card images and declare as a variable
@@ -39,12 +47,20 @@ function dealNow() {
 
   let deck = document.createElement(`img`)
   deck.src = `./images/deck/` + shuffle + `.png`
-  console.log(deck)
+
+  // console.log(deck)
 
   let cells = document.getElementsByTagName(`td`)
+
   for (let i = 0; i < cells.length; i++) {
-    if (cells !== deck) {
-      cells[i] = cells[i].appendChild(deck)
+    let cell = cells[i]
+    console.log(cell)
+    console.log(cells[i])
+
+    if (cell.innerHTML == ``) {
+      cell = cell.appendChild(deck)
+    } else if (cell !== deck) {
+      cell = cell.appendChild(deck.cloneNode(true) * 1)
     }
   }
 }

@@ -33,10 +33,10 @@ body {
   border: solid whitesmoke;
   border-width: 5px;
   border-radius: 10px;
-  padding: 20px;
+  /* padding: 20px; */
   position: relative;
-  height: 40px;
-  width: 20px;
+  height: 100px;
+  width: 70px;
 }
 
 /*----------BUTTONS----------*/
