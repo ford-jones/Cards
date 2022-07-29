@@ -36,7 +36,7 @@ let cardIndex = [
 let suitIndex = [`spades`, `diamonds`, `clubs`, `hearts`]
 
 /*-----------FUNCTIONS-----------*/
-function dealNow() {
+function deal() {
   let randomSuit = suitIndex[Math.floor(Math.random() * suitIndex.length)]
   // console.log(randomSuit)
 
@@ -65,9 +65,25 @@ function dealNow() {
   }
 }
 
+function refresh() {
+  let cells = document.getElementsByTagName(`td`)
+  for (let i = 0; i < cells.length; i++) {
+    let cell = cells[i]
+    console.log(cells[i])
+    let wipe = ``
+    if (cell !== ``) {
+      cell.innerHTML = wipe
+    }
+    // console.log(`clicked!`)
+  }
+}
+
 /*---------CALL FUNCTIONS--------*/
-let button = document.getElementById('dealButton')
-button.onclick = dealNow
+let dealButton = document.getElementById('dealButton')
+dealButton.onclick = deal
+
+let refreshButton = document.getElementById(`refreshButton`)
+refreshButton.onclick = refresh
 
 /*------------APPEND CHILD VARIANT 1-----------*/
 // let cells = document.getElementById(`hand`)
