@@ -57,6 +57,22 @@ body {
   /* cursor: default; */
 }
 
+#refreshButton {
+  background-color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border: 3px solid navy;
+  border-radius: 10px;
+  padding: 3px 30px 3px 30px;
+  font-weight: bold;
+  margin-left: 28%;
+  margin-top: 300px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-spacing: 30px;
+}
+
 /*------------TEXT------------*/
 #banner-text {
   color: navy;
@@ -80,4 +96,12 @@ body {
   margin-left: 65%;
   width: 150px;
   top: 300px;
+}
+
+.refreshImage {
+  width: 150px;
+  margin-left: 28%;
+  top: 600px;
+  display: flex;
+  position: absolute;
 }
